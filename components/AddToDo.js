@@ -8,10 +8,10 @@ import {
   Image,
 } from 'react-native';
 
-function AddToDo() {
+function AddToDo({onInsert}) {
   const [text, setText] = useState('');
   const onPress = () => {
-    //onInsert(text);
+    onInsert(text);
     setText('');
     Keyboard.dismiss();
   };
